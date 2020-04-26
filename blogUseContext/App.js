@@ -1,13 +1,17 @@
 import React from 'react';
 import { View ,Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import  IndexScreen from './src/screens/IndexScreen';
+const Stack = createStackNavigator();
 
 const App =() =>{
     return(
-        <>
-<View style={{flex:1}}><Text>this is basic blog app with </Text> 
-<Text>Context</Text>
-</View>
-</>  
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="IndexScreen">
+     <Stack.Screen name="IndexScreen" options={{headerTitle:"Home"}} component={IndexScreen} />
+     </Stack.Navigator>
+</NavigationContainer>
     );
 
 }
