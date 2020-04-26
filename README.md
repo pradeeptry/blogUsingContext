@@ -1,2 +1,2 @@
 # blogUsingContext
-using contect at higher level
+using context at higher level
